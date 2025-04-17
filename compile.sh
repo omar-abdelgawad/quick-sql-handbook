@@ -1,4 +1,5 @@
 #!/bin/bash
+set -xue
 
 if command -v dnf &>/dev/null; then
     echo "Detected Fedora-based system."
@@ -33,6 +34,7 @@ else
     exit 1
 fi
 
+echo "Compiling 🚀"
 # Compile markdown to PDF using pandoc
 pandoc SQL.md \
     -o build/sql.pdf \
@@ -43,3 +45,4 @@ pandoc SQL.md \
     -V colorlinks=true \
     -V linkcolor=blue \
     -V classoption=table
+echo "Successfully compiled build/sql.pdf"

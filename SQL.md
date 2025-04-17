@@ -628,7 +628,7 @@ contain ideas that we haven't discussed yet. You are welcome to attempt the ques
     WHERE countrycode = 'JPN';
     ```
 
-    Notice how we but the string JPN inside single quotations. If we
+    Notice how we put the string JPN inside single quotations. If we
     remove them, then SQL will think JPN is a column name and not a
     string (You can perform operations on two columns, we will see how and why soon).
     Also notice that because we used quotations, SQL doesn't change JPN to jpn.
