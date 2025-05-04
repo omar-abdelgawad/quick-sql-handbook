@@ -7,7 +7,7 @@ output:
     pdf_engine: lualatex
 ---
 
-## Index
+## Table of Contents
 
 - [Chapter 0: The Why](#chapter-0-the-why)
   - [Why Did I Write This Mini-book](#why-did-i-write-this)
@@ -93,7 +93,7 @@ directly to the solution without feeling guilty.
 
 ## Chapter 1: Quick Introduction to databases
 
-### Chapter 1: What we will learn
+### What we will learn
 
 - Why not just use excel sheets for everything?
 - Data Anomalies
@@ -173,10 +173,10 @@ If employee 1 resigns, the entire row will be deleted.
 |   4          | Management |
 
 The next day, your boss asks you "how many departments are there?"
-(Stupid example, I know. Bare with me). The correct
+(Stupid example, I know. Bear with me). The correct
 answer is 3: Finance, IT, and Management. But when you run the query,
-you only find 2: IT, and Management. This is called a "Deletion
-anomaly". There are other anomaly types, I encourage you to look them
+you only find 2: IT, and Management. This is called a _Deletion
+anomaly_. There are other anomaly types, I encourage you to look them
 up with examples.
 
 ### Relational models
@@ -233,8 +233,9 @@ is our Student ID at E-JUST. It is an integer that holds a meaning (faculty ID +
 enrollment year + an incremental number) and is totally fine to use as a key.
 This is because it is unique for each student and therefore unique for each row.
 
+<!-- I wanted to ask abdeen about the statement below because unique row seems confusing. can we remove it? -->
 You will also notice that we assigned the same department the same
-key. The key should be unique for each unique row.
+key. The key should be **unique** for each unique row.
 
 The IT department exists twice, and you may ask "Can we
 just remove one of them?". The answer is Yes.
@@ -284,9 +285,8 @@ pop-up again when we talk more about SQL, so remember them.
 ### Normalization
 
 The process of splitting the table into multiple tables is called
-normalization. In order to prevent someone from splitting the
-a table into hundreds of other tables with 2 or 3
-columns each, and to make it consistent across databases,
+_normalization_. In order to prevent someone from splitting a table
+into hundreds of other tables with 2 or 3 columns each, and to make it consistent across databases,
 someone came up with rules for normalization called "normal forms".
 
 - 1NF (first normal form)
@@ -320,7 +320,7 @@ The main points I want to take from this section is:
 
 ## Chapter 2: Simple SQL (CRUD)
 
-### Chapter 2: What we will learn
+### What we will learn
 
 - How to setup a database
 - The four basic operations of SQL
@@ -353,7 +353,7 @@ for your Operating System.
 
 Once you download and install DB Browser, go ahead and choose "New
 Database". Type the name of the file and make sure it ends with the
-extension ".db". If a pop-up window called "edit table definition" appears,
+extension ".db". If a pop-up window called "edit table definition" or "SQLCipher encryption" appears,
 close it for now.
 
 Choose the "Execute SQL" tab. A text field will appear on the left
@@ -549,7 +549,7 @@ A few things to note about `WHERE`:
 
 A few things to note about `SELECT`:
 
-- Column names should never contain whitespaces, because then we will
+- Column names should NEVER contain whitespaces, because then we will
   have to put column names inside double quotations (" "). That makes
   the code 10x more annoying to write and even more annoying to read.
   Same applies to table names. You should use an underscore ( \_ ) instead.
@@ -759,7 +759,7 @@ delete all rows but keep the table. While you can delete all rows by using
 
 ## Chapter 3: Subqueries, Joins, and CTEs
 
-### Chapter 3: What we will learn
+### What we will learn
 
 - Dealing with relational tables
 - Subqueries
@@ -972,7 +972,8 @@ query works because the subquery returns only a single value.
 In case the subquery returns more than 1 value, the insert query will
 either return an error because it expects a single integer value
 (that's the data type of the `department_id` column), or just take
-the first value. The behavior depends on the DBMS of choice.
+the first value. The behavior depends on the DBMS of choice. Can you figure out
+which behavior does SQLite3 have?
 
 Moreover, if the subquery return more than 1 column, the DBMS will
 raise an error, because it expects a single column.
@@ -1489,7 +1490,7 @@ any of them will do just fine.
 
 ## Chapter 4: Aggregation
 
-### Chapter 4: What we will learn
+### What we will learn
 
 - Aggregation functions
 - Cases (SQL equivalent to if-statements)
@@ -1887,7 +1888,7 @@ questions will help you a bit more.
 
 ## Chapter 5: Order of Execution
 
-### Chapter 5: What we will learn
+### what we will learn
 
 - Limit and Offset results
 - SQL Order Of Execution
@@ -2041,7 +2042,7 @@ WHERE salary <= 3000;
 
 ## Chapter 6: Window Functions
 
-### Chapter 6: What we will learn
+### What we will learn
 
 - Most common window functions
 - Ordering before selecting
