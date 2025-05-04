@@ -1,9 +1,8 @@
 # 📘 SQL: A Beginner-Friendly Guide
 
-This repository contains a ~40-page introductory guide to **SQL**,authored by [Mohamed Abdeen](https://github.com/MohamedAbdeen21) and currently maintained by **Omar Abdelgawad**.
+This repository contains a ~40-page introductory guide to **SQL**,authored by [Mohamed Abdeen](https://github.com/MohamedAbdeen21).
 
 
----
 
 ## 🔧 How to Build
 
@@ -13,7 +12,7 @@ To generate the PDF version of the book:
 The following requirements are automatically downloaded when running `compile.sh` so you don't need to manually download them.
 
 - [Pandoc](https://pandoc.org/)
-- LaTeX engine (`lualatex` recommended)
+- LaTeX engine (`lualatex` is default)
 
 ### 2. Build the Book
 
@@ -23,7 +22,6 @@ The following requirements are automatically downloaded when running `compile.sh
 
 This will generate `build/sql.pdf`.
 
----
 
 
 ## 📬 Contributing
