@@ -1762,7 +1762,7 @@ In other words, it "groups" the department\_id into a single cell. For
 now, you can think of `GROUP BY` as an alternative way to say "for
 each of the values in the following columns".
 
-In figure 2, you will find a visual example for a query that calculates an
+In figure 3, you will find a visual example for a query that calculates an
 `AVG(value)` and `GROUP BY color`.
 
 ![Group By Illustration](./assets/groupby.png)
