@@ -2108,7 +2108,7 @@ WITH ranked_employees AS (
   SELECT
     name,
     department_id,
-    RANK() OVER (PARTITION BY department_id ORDER BY salary) AS ranking
+    RANK() OVER (PARTITION BY department_id ORDER BY salary DESC) AS ranking
   FROM employees
 )
 

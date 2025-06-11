@@ -37,3 +37,21 @@ UPDATE employees SET salary = 4000
 WHERE id = 4;
 UPDATE employees SET salary = 2000
 WHERE id = 5;
+
+ALTER TABLE employees
+ADD hiring_date DATE;
+UPDATE employees
+SET hiring_date = '2022-01-01'
+WHERE id = 1;
+UPDATE employees
+SET hiring_date = '2022-01-16'
+WHERE id = 2;
+UPDATE employees
+SET hiring_date = '2022-02-01'
+WHERE id = 3;
+UPDATE employees
+SET hiring_date = '2022-02-30'
+WHERE id = 4;
+UPDATE employees
+SET hiring_date = '2022-03-30'
+WHERE id = 5;
