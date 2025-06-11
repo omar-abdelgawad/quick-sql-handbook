@@ -1,0 +1,39 @@
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS departments;
+
+CREATE TABLE departments(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name VARCHAR(12)
+);
+INSERT INTO departments(name)
+VALUES('Finance'),('IT'),('Management');
+
+CREATE TABLE employees(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+department_id INT,
+FOREIGN KEY(department_id) REFERENCES departments(id)
+);
+
+INSERT INTO employees(name, department_id)
+VALUES ('Jack', (SELECT id 
+FROM departments WHERE name = 'Finance')),
+('John', (SELECT id FROM departments
+WHERE name = 'IT')),
+('Dan',(SELECT id FROM departments
+WHERE name = 'IT')),
+('Chris',(SELECT id FROM departments
+WHERE name = 'Management'));
+
+ALTER TABLE employees
+ADD salary INT;
+UPDATE employees SET salary = 3000
+WHERE name = 'Jack';
+UPDATE employees SET salary = 5000
+WHERE name = 'John';
+UPDATE employees SET salary = 3000
+WHERE id = 3;
+UPDATE employees SET salary = 4000
+WHERE id = 4;
+UPDATE employees SET salary = 2000
+WHERE id = 5;
