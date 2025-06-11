@@ -1937,7 +1937,7 @@ By now, you may have noticed that SQL keywords have a fixed place in a
 query. This means that `WHERE` can't appear before `FROM`, `LIMIT`
 can't appear before `GROUP BY` and so on.
 
-The following image, which I found on Pinterest is a good demonstration of
+The following image (Figure 4), which I found on Pinterest is a good demonstration of
 the writing order vs the execution order.
 
 ![SQL Order Of Execution](./assets/orderOfExecution.png)
