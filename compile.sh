@@ -34,6 +34,8 @@ else
     exit 1
 fi
 
+mkdir -p build
+
 echo "Compiling 🚀"
 # Compile markdown to PDF using pandoc
 pandoc SQL.md \
